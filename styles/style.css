@@ -1,0 +1,933 @@
+@font-face {
+    font-family: museo-sans, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo-sans, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo-sans, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo-sans, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+    /*** genrieke stijl, single column (mobile) first ***/
+
+    body    {
+        margin-left: 2em;
+        width: 27em;
+        margin:auto;
+    }
+
+    /*** header navigatie ***/
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1em;
+        margin-bottom: 2em
+    }
+
+    /* Display flex gebruikt om de header schaalbaar te maken. */
+
+    header nav{
+        border-bottom: solid thin;
+        width: 100%;
+    }
+
+    header nav ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0em;
+    }
+
+    header nav ul li {
+        font-family: museo-sans, sans-serif;
+        font-weight: 100;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 5em;
+    }
+
+    header nav ul li:nth-of-type(4) {
+       margin-top: 0em; 
+    }
+    
+    /* In de header heb ik veel gebruik gemaakt van css selectoren. */
+
+    header nav ul li img#home {
+        width: 5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    header nav ul li{
+        display: none;
+    }
+    
+    header nav ul li:first-of-type{
+        display: flex
+    }
+    
+    header nav ul li:last-of-type{
+        display: flex;
+    }
+    
+    header nav ul li:nth-of-type(4){
+        display: flex;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    div img:first-of-type{
+        display: none;
+    }
+
+    div img:last-of-type{
+        margin-top: 2em;
+        width: 31.2em;
+    }
+
+    /*** bron van img: http://mentalfloss.com/article/573469/why-is-iceland-so-expensive ***/
+
+
+    /*** overzichtspagina ***/
+    
+    main{
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    main nav{
+        display: none;
+    }
+
+    h2{
+        font-family: museo-sans, sans-serif;
+        font-size: 1em;
+        margin-bottom: 1em;
+        margin-top: 3em;
+    }
+
+    section#boven{
+        display: flex;
+        width: 27em;
+        margin-bottom: 0.5em;
+        overflow-x: scroll;
+    }
+    
+    section#midden{
+        display: flex;
+        width: 27em;
+        margin-bottom: 0.5em;
+        overflow-x: scroll;
+    }
+    
+    section#onder{
+        display: flex;
+        width: 27em;
+        margin-bottom: 0.5em;
+        overflow-x: scroll;
+    }
+
+    
+    /* Binnen de sections is de content scrollbaar zodat er ruimte in het scherm wordt bespaard. */
+
+
+    /*** alles binnen de article kleiner zodat de gebruiker meer verhalen in 1 oogopslag kan zien ***/
+    
+    article {
+        display: grid;
+        border: solid thin;
+        width: 14em;
+        margin-bottom: 1.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+        margin: 0 auto;
+        width: 9em;
+        margin-right: 2em;
+    }
+
+    article img {
+        grid-row: 1;
+        width: 8em;
+        height: auto;
+    }
+
+    article h3 {
+        font-family: museo-sans, sans-serif;
+        font-weight: 700;
+        grid-row: 2;
+        font-size: 0.9em;
+        margin-bottom: 0;
+    }
+
+    article p:first-of-type {
+        grid-row: 3;
+        font-size: 0.8em;
+        font-family: museo-sans, sans-serif;
+        margin-bottom: 0;
+    }
+
+    article p:last-of-type{
+        grid-row: 4;
+        color: purple;
+        font-size: 0.8em;
+        font-family: museo-sans, sans-serif;
+    }
+
+
+    /*** de download button absolute voor makkelijke positionering ***/
+
+    body section article {
+        position: relative;
+    }
+
+    body section article button.down {
+        -webkit-appearance: none;
+        width: 5em;
+        height: 5em;
+        background-image: url(../images/download.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 4em;
+        position: absolute;
+        right: -2.5em;
+        top: 3em;
+        background-color: transparent;
+        border: 0;
+        z-index: 3;
+    }
+
+    body section article button.down {
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+    }
+
+    /* Als er op de downloadbutton wordt geklikt verandert de image door JavaSript met een animatie uit css. */
+
+    body section article button.gedownload{
+        background-image: url(../images/vinkje.png);
+    }
+
+
+    /*** login pagina ***/
+
+    fieldset{
+        border: solid thin;
+        margin-top: 2em;
+        margin-bottom: 15em;
+        width: 25.2em;
+    }
+
+    fieldset legend{
+        margin: 0 auto;
+        font-family: museo-sans, sans-serif;
+        font-weight: 700;
+    }
+
+    fieldset form{
+        margin-top: 2em;
+    }
+
+    fieldset input{
+        display: block;
+        border: solid thin;
+        padding-bottom: 0.8em;
+        padding-top: 0.8em;
+        padding-left: 1em;
+        margin-left: 1.3em;
+        margin-top: 1em;
+        font-family: museo-sans, sans-serif;
+        font-size: 1em;
+        width: 21em;
+    }
+
+    input:focus{
+        border: solid purple;
+    }
+
+    /* Input:focus toegevoegd zodat de user weet in welk invoerveld hij zit. */
+
+    fieldset button{
+        margin-top: 2.5em;
+        margin-bottom: 1em;
+        margin-left: 1.3em;
+        padding-bottom: 0.8em;
+        padding-top: 0.8em;
+        width: 22.3em;
+        font-family: museo-sans, sans-serif;
+        font-size: 1em;
+        background-color: purple;
+    }
+
+    fieldset button a{
+        color: white;
+    }
+
+    fieldset button:hover{
+        cursor: pointer;
+    }
+
+    fieldset p{
+        font-family: museo-sans, sans-serif;
+        margin-left: 4em;
+        margin-bottom: 1.5em;
+        color: grey;  
+    }
+
+    
+    /*** Mijn verhalen pt 1 ***/
+
+
+    main#verhalen section article{
+        margin-bottom: 1em;
+        margin-left: 0em;
+        width: 9em
+    }
+
+     main#verhalen section article img{
+        width: 9em;
+    }
+
+    /*** Mijn verhalen pt 2 ***/
+
+    main#verhalen2 section article{
+        margin-bottom: 1em;
+        margin-left: 0em;
+        width: 9em
+    }
+
+
+    /*** Geselecteerde verhaal ***/
+
+    header nav ul li img.toevoegen{
+        width: 1.1em;
+        margin-left: 0.3em;
+        opacity: 1;
+    }
+
+   header nav ul li img.toevoegen{
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+
+    /* Met behulp van JavaScript wordt er een icoontje getoont met een animatie gemaakt in css. */
+
+    section#verhaal img#haikudesk{
+        display: none;
+    }
+
+    section#verhaal img#haikumobile{
+        width: 27em;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+
+    section#verhaal button.like{
+        -webkit-appearance: none;
+        width: 5em;
+        height: 5em;
+        background-image: url(../images/dislike.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 4em;
+        position: absolute;
+        right: 8em;
+        top: 14.5em;
+        background-color: transparent;
+        border: 0;
+        z-index: 3;
+    }
+
+    section#verhaal button.like{
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+    }
+
+    section#verhaal button.liked{
+        background-image: url(../images/like.png);
+    }
+
+    section#verhaal button.download {
+        -webkit-appearance: none;
+        width: 5em;
+        height: 5em;
+        background-image: url(../images/download.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 4em;
+        position: absolute;
+        right: 2.6em;
+        top: 14.5em;
+        background-color: transparent;
+        border: 0;
+        z-index: 3;
+    }
+
+    section#verhaal button.download {
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+    }
+
+    section#verhaal button.gedown{
+        background-image: url(../images/vinkje.png);
+    }
+
+    /* Als er op de download button of like button wordt geklikt verandert de image door JavaSript met een animatie uit css. */
+
+    section#verhaal img#pijl{
+        position: absolute;
+        width: 13em;
+        margin-left: 7em;
+        margin-top: 14em;
+    }
+
+
+    section#verhaal img#pijl:hover{
+        cursor: pointer;
+        transform: rotate(180deg);
+    }
+
+
+    /*** Footer ***/
+    
+    footer{
+        width: 29.3em;
+        margin-top: 2em;
+        margin-left: -2em;
+        padding-left: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: #FAFAFA;
+    }
+
+    footer nav ul{
+        list-style-type: none;
+        padding: 0em;
+    }
+
+    footer nav ul li{
+        font-family: museo-sans, sans-serif;
+        font-weight: 100;
+        cursor: pointer;
+        margin-bottom: 0.4em;
+        font-size: 0.8em;
+    }
+
+    footer p{
+        font-family: museo-sans, sans-serif;
+        font-weight: 100;
+        font-size: 0.8em;
+    }
+
+
+/*** Breakpoint 1 - tablet ***/
+
+@media (min-width: 45em) {
+    
+    header nav{
+        margin-left: -1em;
+        width: 45em
+    }
+    
+    header div img:last-of-type{
+        width: 59em;
+    }
+    
+    /*** Ik maak geen gebruik van de 1fr 1fr grid omdat er in mijn ontwerp niet meerdere kolommen worden gebruikt als het scherm groter wordt, maar de hele layout verandert ***/
+    
+    main{
+        width: 46em;
+        margin-left: -10em;
+    }
+    
+    section#boven {
+        width: 46em;
+    }
+    
+    section#midden{
+        width: 46em;
+    }
+    
+    section#onder{
+        width: 46em;
+    }
+    
+    /*** Article groter dan mobile zodat het de gebruiker in een oogopslag meer ziet ***/
+    
+    article {
+        display: grid;
+        border: solid thin;
+        margin-bottom: 1.5em;
+        padding-left: 1em;
+        padding-right: 2.5em;
+        padding-top: 1em;
+        margin: 0 auto;
+        width: 9em;
+        margin-right: 2.2em;
+    }
+
+    img.x {
+        grid-row: 1;
+        width: 10em;
+        height: auto;
+    }
+
+    article h3 {
+        font-family: museo-sans, sans-serif;
+        font-weight: 700;
+        grid-row: 2;
+        font-size: 0.9em;
+        margin-bottom: 0;
+    }
+
+    article p:first-of-type {
+        grid-row: 3;
+        font-size: 0.8em;
+        font-family: museo-sans, sans-serif;
+        margin-bottom: 0;
+    }
+
+    article p:last-of-type{
+        grid-row: 4;
+        color: purple;
+        font-size: 0.8em;
+        font-family: museo-sans, sans-serif;
+    }
+    
+    footer{
+        width: 53em;
+        margin-left:-16em;
+        padding-left: 6em;
+    }
+    
+    
+    /*** Geselecteerde verhaal ***/
+    
+    section#verhaal img#haikumobile{
+        display: none;
+    }
+    
+    section#verhaal img#haikudesk{
+        display: block;
+        width: 46em;
+    }
+    
+    section#verhaal button.like{
+        margin-right: 7em;
+    }
+    
+    section#verhaal button.download{
+        margin-right: 7em;
+    }
+    
+    section#verhaal img#pijl{
+        margin-left: 18.2em;
+        margin-top: 11em;
+        width: 9em;
+    }
+    
+    
+   }
+
+
+/*** Breakpoint 2 - desktop ***/
+
+@media (min-width: 73em) {
+    
+    body{
+        width: 70em; 
+        margin: 0 auto;
+    } 
+    
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    header nav{
+        border-bottom: solid thin;
+        width: 100%;
+    }
+
+    header nav ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0em;
+    }
+
+    header nav ul li {
+        display: flex;
+        font-family: museo-sans, sans-serif;
+        font-weight: 100;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 5em;
+    }
+
+    header nav ul li:nth-of-type(4) {
+       margin-top: 0em; 
+    }
+
+    header nav ul li img {
+        width: 5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    
+    div img:first-of-type{
+        display:block;
+        width: 105em;
+        margin-top: 3em;
+    }
+    
+    div img:last-of-type{
+        display: none;
+    }
+    
+     /* bron van img: http://mentalfloss.com/article/573469/why-is-iceland-so-expensive */
+
+    /*** Overzichtpagina populair ***/
+    
+    main {
+        display:grid;
+        width: 200em;
+        margin-top: 0em;
+        margin: 0 auto;
+    }
+    
+    main nav{
+        display: grid;
+    }
+
+    main nav ul{
+        width: 30em;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none; 
+        margin-left: 17.5em;
+        margin-top: 1em;
+        margin-bottom: 2.5em;
+    }
+
+    main nav ul li {
+        display: inline;
+        font-family: museo-sans, sans-serif;
+        font-weight: 100;
+        font-size: 1em;
+        cursor: pointer;
+        justify-items: space-between;   
+    }
+
+    main nav ul li:first-of-type {
+       font-weight: 700;
+        border-bottom: solid purple;
+    }
+
+    main nav ul li:hover{
+        font-weight: 700;
+        border-bottom: solid purple;
+    }
+    
+    h2{
+        display: none;
+    }
+    
+    section{
+        margin-top: 1em;
+    }
+        
+    section#boven {
+        grid-row: 2;
+        overflow-x: visible;
+    }
+
+    section#boven article {
+        display: inline-grid;
+        margin-right: 3em;
+    }
+
+    section#midden {
+        grid-row: 3;
+        overflow-x: visible;
+    }
+
+    section#midden article {
+        display: inline-grid;
+        margin-right: 3em;
+    }
+
+    section#onder {
+        display: none
+    }
+
+    article {
+        border: solid;
+        width: 14em;
+        border-width: thin;
+        margin-bottom: 1.5em;
+        margin-right: 3em;
+        padding-left: 1em;
+        padding-top: 1em;
+        display: block;
+    }
+
+    article:hover {
+        cursor: pointer;
+    }
+    
+    
+    /*** Overzichtspagina meeste likes ***/
+    
+    main#index2 nav ul li:hover{
+        font-weight: 700;
+        border-bottom: solid purple;
+    }
+    
+    main#index2 nav ul li{
+        font-weight: 100;
+        border-bottom: none;
+    }
+    
+    main#index2 nav ul li:nth-of-type(2){
+        font-weight: 700;
+        border-bottom: solid purple;
+    }
+    
+    
+    /*** Overzichtspagina aanbevolen ***/
+    
+    main#index3 nav ul li{
+        font-weight: 100;
+        border-bottom: none;
+    }
+    
+    main#index2 nav ul li:hover{
+        font-weight: 700;
+        border-bottom: solid purple;
+    }
+    
+    main#index3 nav ul li:last-of-type{
+        font-weight: 700;
+        border-bottom: solid purple;
+    }
+    
+    
+    /*** alles binnen de article ***/
+
+    body section article button:hover {
+        cursor: pointer;
+    }
+
+    #downloaden {
+        width: 10em;
+        position: absolute;
+        top: 24em;
+        right: 2;
+    }
+
+    article {
+        display: grid;
+        padding-right: 1em;
+    }
+
+    img.x {
+        grid-row: 1;
+        width: 13em;
+        height: auto;
+    }
+
+    article h3 {
+        font-family: museo-sans, sans-serif;
+        font-weight: 700;
+        grid-row: 2;
+        font-size: 0.9em;
+        margin-bottom: 0;
+    }
+
+    article p:first-of-type {
+        grid-row: 3;
+        font-size: 0.8em;
+        font-family: museo-sans, sans-serif;
+        margin-bottom: 0;
+    }
+
+    article p:last-of-type{
+        grid-row: 4;
+        color: purple;
+        font-size: 0.8em;
+        font-family: museo-sans, sans-serif;
+    }
+    
+    
+    /*** Login pagina ***/
+    
+    fieldset{
+        margin: 0 auto;
+        margin-top: 2.5em;
+        margin-bottom: 13.5em;
+    }
+    
+    
+    /*** Mijn verhalen pt 1 ***/
+    
+    main#verhalen{
+        margin-bottom: 8em;
+    }    
+    
+    main#verhalen section article{
+        border: solid;
+        width: 14em;
+        border-width: thin;
+        margin-bottom: 1.5em;
+        margin-right: 3em;
+        padding-left: 1em;
+        padding-top: 1em;
+        display: block;
+    }
+    
+    main#verhalen section article img{
+        width: 13em;
+    }
+    
+    main#verhalen section#midden{
+        display: none;
+    }
+    
+    
+    /*** Mijn verhalen pt 2 ***/
+    
+     main#verhalen2 section article{
+        border: solid;
+        width: 14em;
+        border-width: thin;
+        margin-bottom: 1.5em;
+        margin-right: 3em;
+        padding-left: 1em;
+        padding-top: 1em;
+        display: block;
+    }
+    
+    main#verhalen2 section article img{
+        width: 13em;
+    }
+    
+    main#verhalen2 nav ul li:first-of-type{
+        font-weight: 100;
+        border-bottom: none;
+    }
+    
+    main#verhalen2 nav ul li:last-of-type{
+        font-weight: 700;
+        border-bottom: solid purple;
+    }
+    
+    main#verhalen2{
+        margin-bottom: 8em;
+    } 
+    
+    main#verhalen2 section#boven{
+        display: none;
+    }
+    
+    
+    /*** Geselecteerde verhaal ***/
+    
+    section#verhaal{
+        margin-top: -2em;
+    }
+    
+    section#verhaal h2{
+        display: block;
+    }
+    
+    section#verhaal img#haikumobile{
+        display: none;
+    }
+    
+    section#verhaal img#haikudesk{
+        display: block;
+        width: 70em;
+    }
+    
+    section#verhaal button.like{
+        margin-right: 22em;
+    }
+    
+     section#verhaal button.download{
+         margin-right: 22.5em;
+    }
+    
+    section#verhaal img#pijl{
+        position: absolute;
+        width: 13em;
+        margin-left: 28em;
+        margin-top: 16.5em;
+    }
+    
+    
+    /*** Footer ***/
+    
+    footer{
+        padding-top: 2em;
+        width: 105em;
+        margin-left: -18em;
+        padding-bottom: 3em;
+    }
+    
+    footer nav ul{
+        margin-left: 12em;
+        margin-right: 19em;
+        display: flex;
+        justify-content: space-between;
+        font-family: museo-sans, sans-serif;    
+    }
+    
+    footer nav ul li{
+        font-size: 0.8em;
+    }
+    
+    footer p{
+        margin-left: 15em;
+        margin-top: 2em;
+    }
+    
+}
+

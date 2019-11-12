@@ -1,0 +1,448 @@
+
+body{
+    width: 70em; 
+    margin: auto;
+} 
+
+/***** header navigatie *****/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+header nav{
+    border-bottom: solid thin;
+    width: 100%;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0em;
+}
+
+header nav ul li {
+    font-family: museo-sans;
+    font-weight: 100;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 5em;
+}
+
+header nav ul li:nth-of-type(4) {
+   margin-top: 0em; 
+}
+
+header nav ul li img {
+    width: 5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+/***** overzichtpagina *****/
+
+main {
+    display: grid;
+    margin-top: 2em;
+}
+
+main nav ul{
+    width: 30em;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; 
+    margin-left: 17.5em;
+    margin-top: 3em;
+    margin-bottom: 2.5em;
+}
+
+main nav ul li {
+    display: inline;
+    font-family: museo-sans;
+    font-weight: 100;
+    font-size: 1em;
+    cursor: pointer;
+    justify-items: space-between;   
+}
+
+main nav ul li:first-of-type {
+   font-weight: 700;
+    border-bottom: solid purple;
+}
+
+main nav ul li:hover{
+    font-weight: 700;
+    border-bottom: solid purple;
+}
+
+h2{
+    display: none;
+}
+
+section{
+    margin-bottom: 3em;
+    overflow-x: scroll;
+    background-color: aqua;
+    width:100vw;
+}
+
+section#boven {
+    grid-row: 2
+}
+
+section#boven article {
+    display: inline-grid;
+    margin-right: 3em;
+}
+
+section#midden {
+    width: 100em;
+    grid-row: 3;
+}
+
+section#midden article {
+    display: inline-grid;
+    margin-right: 3em;
+}
+
+section#onder {
+    display: none
+}
+
+article {
+    border: solid;
+    width: 14em;
+    border-width: thin;
+    margin-bottom: 1.5em;
+    margin-right: 3em;
+    padding-left: 1em;
+    padding-top: 1em;
+    display: block;
+    margin: 0 auto;
+}
+
+article:hover {
+    cursor: pointer;
+}
+
+/***** de download button relative voor makkelijke positionering *****/
+
+body section article {
+    position: relative;
+}
+
+body section article button.down {
+    -webkit-appearance: none;
+    width: 5em;
+    height: 5em;
+    background-image: url(../images/download.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4em;
+    position: absolute;
+    right: -2.5em;
+    top: 3em;
+    background-color: transparent;
+    border: 0;
+    z-index: 3;
+}
+
+body section article button.down {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+}
+
+body section article button.gedownload {
+    background-image: url(../images/vinkje.png);
+}
+
+/***** alles binnen de article *****/
+
+body section article button:hover {
+    cursor: pointer;
+}
+
+#rating {
+    width: 8em;
+    padding-bottom: 1em;
+}
+
+#downloaden {
+    width: 10em;
+    position: absolute;
+    top: 24em;
+    right: 2;
+}
+
+article {
+    display: grid;
+}
+
+img.x {
+    grid-row: 1;
+    width: 13em;
+    height: auto;
+}
+
+article h3 {
+    font-family: museo-sans, sans-serif;
+    font-weight: 700;
+    grid-row: 2;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+article p:first-of-type {
+    grid-row: 3;
+    font-size: 0.8em;
+    font-family: museo-sans, sans-serif;
+    margin-bottom: 0;
+}
+
+article p:last-of-type{
+    grid-row: 4;
+    color: purple;
+    font-size: 0.8em;
+    font-family: museo-sans, sans-serif;
+}
+
+/***** geselecteerde verhaal *****/
+
+main#verhaal {
+    margin-left: 0em;
+}
+
+main#verhaal h2 {
+    font-family: museo-sans, sans-serif;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+main#verhaal button.terug {
+    -webkit-appearance: none;
+    width: 5em;
+    height: 5em;
+    background-image: url(../images/terugknop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4.5em;
+    position: absolute;
+    left: 2em;
+    top: 18em;
+    background-color: transparent;
+    border: 0;
+    z-index: 3;
+}
+
+main#verhaal button.terug:hover {
+    cursor: pointer;
+}
+
+main#verhaal button.down {
+    -webkit-appearance: none;
+    width: 5em;
+    height: 5em;
+    background-image: url(../images/download.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4.5em;
+    position: absolute;
+    right: 2.2em;
+    top: 18em;
+    background-color: transparent;
+    border: 0;
+    z-index: 3;
+}
+
+main#verhaal button.gedownload {
+    background-image: url(../images/vinkje.png);
+}
+
+button.down:hover {
+    cursor: pointer;
+}
+
+img#gekozenverhaal {
+    position: relative;
+    width: 22.3em;
+}
+
+img#pijlhaiku {
+    position: absolute;
+    top: 36.5em;
+    left: 6.5em;
+    width: 10em;
+}
+
+img#pijlhaiku:hover {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+/***** mobile version *****/
+
+@media (max-width: 46em) {
+        
+    body{
+        margin-left: 2em;
+        width: 27em;
+        margin:auto;
+    }
+    
+    header nav ul li{
+        display: none;
+    }
+    
+    header nav ul li:first-of-type{
+        display: flex
+    }
+    
+    header nav ul li:last-of-type{
+        display: flex;
+    }
+    
+    header nav ul li:nth-of-type(4){
+        display: flex;
+    }
+    
+    main{
+        display: grid;
+    }
+    
+    main nav {
+        display: none;
+    }
+    
+    h2{
+        /display:grid;
+        font-family: museo-sans;
+        font-size: 1em;
+        margin-bottom: 1em;
+        margin-top: 2em;
+    }
+    
+    h2:first-of-type{
+        grid-row: 1;
+    }
+    
+    section#boven{
+        width: 60em;
+        grid-row: 2;
+        margin-bottom: 0.5em;
+    }
+    
+    h2:nth-of-type(2){
+        grid-row: 3;
+    }
+    
+    section#midden{
+        width: 60em;
+        grid-row: 4;
+        margin-bottom: 0.5em;
+    }
+    
+    h2:last-of-type{
+        grid-row: 5;
+    }
+    
+    section#onder{
+        display: flex;
+        width: 60em;
+        grid-row: 6;
+        margin-bottom: 0.5em;
+    }
+    
+    section#onder article {
+        display: inline-grid;
+        margin-right: 3em;
+}
+    
+    /***** alles binnen de article kleiner zodat de gebruiker meer verhalen in 1 oogopslag kan zien *****/
+    
+    article {
+        display: grid;
+        width: 9em;
+        margin-right: 1.5em;
+    }
+
+    img.x {
+        grid-row: 1;
+        width: 8em;
+        height: auto;
+    }
+
+    article h3 {
+        font-family: museo-sans, sans-serif;
+        font-weight: 700;
+        grid-row: 2;
+        font-size: 0.9em;
+        margin-bottom: 0;
+    }
+
+    article p:first-of-type {
+        grid-row: 3;
+        font-size: 0.8em;
+        font-family: museo-sans, sans-serif;
+        margin-bottom: 0;
+    }
+
+    article p:last-of-type{
+        grid-row: 4;
+        color: purple;
+        font-size: 0.8em;
+        font-family: museo-sans, sans-serif;
+    }
+    
+   
+    
+    /***** login pagina *****/
+    
+    fieldset{
+        margin-top: 2em;
+        padding: 1em;
+    }
+    
+    input{
+        display: block;
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+    
+    
+    /***** geselecteerde verhaal *****/
+    
+    main#verhaal{
+        display: grid;
+    }
+    
+    main#verhaal h2{
+        grid-row:1;
+    }
+    
+    main#verhaal section img#haikumobile{
+        grid-row: 2;
+        width: 27em;
+    }
+    
+    main#verhaal section img#haikudesk{
+        display:none;
+    }
+    
+    main#verhaal section button:first-of-type{
+        margin-left: 3em;
+        margin-top: 5em;
+    }
+    
+    main#verhaal section button:last-of-type{
+        margin-right: 3em;
+        margin-top: 5em;
+    }
+              
+}
